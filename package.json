@@ -1,0 +1,10 @@
+{
+  "name": "tinyjs-types",
+  "version": "0.1.0",
+  "author": "stonelee",
+  "description": "Typescript definitions for Tiny.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/stonelee/tinyjs-types"
+  }
+}
