@@ -2320,9 +2320,20 @@ declare namespace Tiny {
         // As of ResourceLoader v2 we no longer require EventEmitter
         // However, for depreciation reasons, it remains.
         class Loader extends utils.EventEmitter {
+            /**
+             * 执行加载
+             */
+            run(opts?: {
+                resources?: string[],
+                onProgress?: function,
+                onComplete?: function,
+                onError?: function,
+                onAllComplete?: function,
+            }): void;
+
             // pixi overrides here
             //tslint:disable-next-line:ban-types forbidden-types
-            static addPixiMiddleware(fn: Function): void;
+            static addTinyMiddleware(fn: Function): void;
   
             // below this line is the original non-pixi loader
   
