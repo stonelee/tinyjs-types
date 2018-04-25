@@ -6,21 +6,25 @@ declare namespace Tiny {
         height: number
     }
 
+    interface config {
+        width?: number,
+        height?: number,
+        referWidth?: number,
+        fixSize?: boolean,
+        canvasId?: string,
+        orientation?: number,
+        listenRotation?: boolean,
+        dpi?:	number,
+        showFPS?: boolean,
+        renderType?: number,
+        renderOptions?:	object,
+        autoRender?: number,
+    }
+
+    const config: config;
+
     class Application {
-        constructor(config: {
-            width?: number,
-            height?: number,
-            referWidth?: number,
-            fixSize?: boolean,
-            canvasId?: string,
-            orientation?: number,
-            listenRotation?: boolean,
-            dpi?:	number,
-            showFPS?: boolean,
-            renderType?: number,
-            renderOptions?:	object,
-            autoRender?: number,
-        });
+        constructor(config: config);
 
         renderer: Tiny.WebGLRenderer | Tiny.CanvasRenderer;
         stage: Container;
