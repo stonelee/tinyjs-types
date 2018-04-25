@@ -9,7 +9,7 @@ declare namespace Tiny {
     class Application {
         constructor(config: {
             width?: number,
-            heigth?: number,
+            height?: number,
             referWidth?: number,
             fixSize?: boolean,
             canvasId?: string,
