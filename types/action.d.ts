@@ -198,21 +198,21 @@ declare namespace Tiny {
 
 
     function MoveBy(duration: number, to: {
-        x: number
-        y: number
+        x?: number
+        y?: number
     }): Action
     function MoveTo(duration: number, to: {
-        x: number
-        y: number
+        x?: number
+        y?: number
     }): Action
 
     function ScaleBy(duration: number, to: {
-        scaleX: number
-        scaleY: number
+        scaleX?: number
+        scaleY?: number
     }): Action
     function ScaleTo(duration: number, to: {
-        scaleX: number
-        scaleY: number
+        scaleX?: number
+        scaleY?: number
     }): Action
 
     function RotateBy(duration: number, to: {
