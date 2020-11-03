@@ -9,6 +9,7 @@ declare namespace Tiny {
     interface config {
         width?: number,
         height?: number,
+        debug?: boolean,
         referWidth?: number,
         fixSize?: boolean,
         canvasId?: string,
