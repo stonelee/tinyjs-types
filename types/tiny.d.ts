@@ -20,6 +20,8 @@ declare namespace Tiny {
         renderType?: number,
         renderOptions?:	object,
         autoRender?: number,
+        viewTouched?: boolean,
+        extraContextAttributes?: {}
     }
 
     const config: config;
@@ -53,4 +55,20 @@ declare namespace Tiny {
     class BitmapText extends Tiny.extras.BitmapText {}
     class AnimatedSprite extends Tiny.extras.AnimatedSprite {}
     class EventEmitter extends Tiny.utils.EventEmitter {}
+
+    namespace ticker {
+        class CountDown extends EventEmitter {
+            constructor(opts: {
+                duration?: number,
+                times?: number,
+            })
+            start()
+            pause(auto: boolean): void;
+            stop(auto: boolean): void;
+            isManualPause(): boolean;
+            ifManualStop(): boolean;
+            destroy(): void;
+            running: boolean;
+        }
+    }
 }

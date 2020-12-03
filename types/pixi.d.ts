@@ -2508,6 +2508,7 @@ declare namespace Tiny {
                 DOCUMENT: string;
                 JSON: string;
                 TEXT: string;
+                JSONOBJECT: string;
             };
   
             static EMPTY_GIF: string;
