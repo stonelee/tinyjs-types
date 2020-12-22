@@ -17,6 +17,7 @@ declare namespace Tiny {
         listenRotation?: boolean,
         dpi?:	number,
         showFPS?: boolean,
+        fps?: number,
         renderType?: number,
         renderOptions?:	object,
         autoRender?: number,
