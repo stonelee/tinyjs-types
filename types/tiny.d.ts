@@ -1,18 +1,18 @@
 declare namespace Tiny {
     const Loader: loaders.Loader
-    
+
     const WIN_SIZE:  {
         width: number
         height: number
     }
 
-    interface config {
+    interface AppConfig {
         width?: number,
         height?: number,
         debug?: boolean,
         referWidth?: number,
         fixSize?: boolean,
-        canvasId?: string,
+        canvasId?: string | HTMLCanvasElement,
         orientation?: number,
         listenRotation?: boolean,
         dpi?:	number,
@@ -25,10 +25,13 @@ declare namespace Tiny {
         extraContextAttributes?: {}
     }
 
-    const config: config;
+    /** @deprecated use AppConfig instead */
+    interface config extends AppConfig {}
+
+    const config: AppConfig;
 
     class Application {
-        constructor(config: config);
+        constructor(config: AppConfig);
 
         renderer: Tiny.WebGLRenderer | Tiny.CanvasRenderer;
         stage: Container;
