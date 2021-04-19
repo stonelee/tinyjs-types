@@ -24,6 +24,12 @@ declare namespace Tiny {
         viewTouched?: boolean,
         extraContextAttributes?: {}
     }
+        
+    interface StageOptions {
+        children?: boolean,
+        texture?: boolean,
+        baseTexture?: boolean,
+    }
 
     /** @deprecated use AppConfig instead */
     interface config extends AppConfig {}
@@ -41,7 +47,7 @@ declare namespace Tiny {
         stop(): void;
         start(): void;
         render(): void;
-        destroy(removeView?: boolean): void;
+        destroy(removeView?: boolean, stageOptions?: StageOptions): void;
         readonly view: HTMLCanvasElement;
 
 
