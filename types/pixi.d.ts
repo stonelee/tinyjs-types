@@ -482,6 +482,7 @@ declare namespace Tiny {
         worldTransform: Matrix;
         localTransform: Matrix;
         protected _worldID: number;
+        protected _parentID: number;
         updateLocalTransform(): void;
         updateTransform(parentTransform: TransformBase): void;
         updateWorldTransform(parentTransform: TransformBase): void;
@@ -500,6 +501,7 @@ declare namespace Tiny {
         protected _nsx?: number;
         protected _cx?: number;
         protected _currentLocalID: number;
+        protected _localID: number;
   
         protected onChange(): void;
         updateSkew(): void;
@@ -690,7 +692,7 @@ declare namespace Tiny {
   
         fromArray(array: number[]): void;
         set(a: number, b: number, c: number, d: number, tx: number, ty: number): Matrix;
-        toArray(transpose?: boolean, out?: number[]): number[];
+        toArray(transpose?: boolean, out?: Float32Array): number[];
         apply(pos: Point, newPos?: Point): Point;
         applyInverse(pos: Point, newPos?: Point): Point;
         translate(x: number, y: number): Matrix;
@@ -719,6 +721,9 @@ declare namespace Tiny {
         constructor(cb: () => any, scope?: any, x?: number, y?: number);
         cb: () => any;
         scope: any;
+        _x: number;
+        _y: number;
+        equals(p: ObservablePoint): boolean;
     }
     class Point extends PointLike {
         constructor(x?: number, y?: number);
